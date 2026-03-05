@@ -31,12 +31,11 @@
                 <a href="Manojkumar_Resume.pdf" download="Manojkumar_Resume.pdf" class="cta-btn outline-btn">Download Resume</a>
             </div>
         </div>
-
         <div class="glow-circle top-left"></div>
         <div class="glow-circle bottom-right"></div>
     </section>
 
-<section id="education" class="education">
+    <section id="education" class="education">
         <h2 class="section-title reveal-text">Education Journey</h2>
         <div class="edu-container">
             <div class="edu-card 3d-flip delay-1">
@@ -63,11 +62,11 @@
     </section>
 
     <section id="skills" class="skills">
-        <h2 class="section-title reveal-text">Technical Arsenal</h2>
+        <h2 class="section-title reveal-text">Technical Skills</h2>
         
         <div class="skills-grid">
-            <div class="skill-badge pop-in delay-1"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" alt="Python" width="20"> Python</div>
-            <div class="skill-badge pop-in delay-2"><img src="https://cdn-icons-png.flaticon.com/512/6132/6132222.png" alt="C++" width="20"> C / C++</div>
+            <div class="skill-badge pop-in delay-1">🐍 Python</div>
+            <div class="skill-badge pop-in delay-2">💻 C / C++</div>
             <div class="skill-badge pop-in delay-3">⚙️ Verilog</div>
             <div class="skill-badge pop-in delay-4">📊 MATLAB</div>
             <div class="skill-badge pop-in delay-5">⚡ Cadence Virtuoso</div>
@@ -75,7 +74,7 @@
             <div class="skill-badge pop-in delay-7">🔌 LTspice</div>
         </div>
 
-        <h3 class="sub-title reveal-text" style="margin-top: 60px; color: white;">Licenses & Certifications</h3>
+        <h3 class="sub-title reveal-text" style="margin-top: 60px; color: white;">Certifications</h3>
         <div class="cert-container">
             <div class="cert-card slide-up delay-1">
                 <div class="cert-icon">🚁</div>
@@ -109,22 +108,19 @@
     </section>
 
     <section id="projects" class="projects">
-        <h2 class="section-title hidden">Featured Projects</h2>
-        
+        <h2 class="section-title reveal-text">Featured Projects</h2>
         <div class="project-grid">
-            <div class="card hidden">
+            <div class="card slide-up delay-1">
                 <div class="card-icon">⚡</div>
                 <h3>VLSI VCO Design</h3>
                 <p>Designed a Voltage Controlled Oscillator (VCO) of 180nm Full custom (RTL to GDS) utilizing Cadence Virtuoso.</p>
             </div>
-
-            <div class="card hidden">
+            <div class="card slide-up delay-2">
                 <div class="card-icon">🤖</div>
                 <h3>Autonomous Cleaning Machine</h3>
                 <p>Engineered an autonomous robotics machine designed to efficiently cut grass and clean surface areas.</p>
             </div>
-
-            <div class="card hidden">
+            <div class="card slide-up delay-3">
                 <div class="card-icon">💡</div>
                 <h3>IoT Smart Streetlight</h3>
                 <p>Developed an Internet of Things (IoT) based streetlight system engineered to significantly reduce power consumption.</p>
@@ -132,14 +128,64 @@
         </div>
     </section>
 
-    <section id="contact" class="contact hidden">
-        <h2 class="section-title">Let's Connect</h2>
-        <p>Currently open for software and ECE opportunities.</p>
-        <p style="color: var(--text-muted); margin-top: -20px; margin-bottom: 40px;">Vizianagaram, Andhra Pradesh | +91 8639059067</p>
-        <a href="mailto:manojdannana8@gmail.com" class="contact-btn">Say Hello</a>
+    <section id="contact" class="contact">
+        <h2 class="section-title reveal-text">Get In Touch</h2>
+        <p class="contact-subtitle reveal-text">I'm always open to discussing new opportunities, collaborations, or just having a chat about technology.</p>
+
+        <div class="contact-container">
+            <form class="contact-form slide-up delay-1" onsubmit="event.preventDefault(); alert('Message sent successfully!');">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Name *</label>
+                        <input type="text" placeholder="Your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email *</label>
+                        <input type="email" placeholder="your.email@example.com" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label style="text-align: left;">Message *</label>
+                    <textarea rows="5" placeholder="Tell me about your project or just say hello..." required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+
+            <div class="info-cards slide-up delay-2">
+                <div class="info-card">
+                    <div class="info-icon">✉️</div>
+                    <h4>Email</h4>
+                    <p>manojdannana8@gmail.com</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">📍</div>
+                    <h4>Location</h4>
+                    <p>Vizianagaram, India</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">💻</div>
+                    <h4>GitHub</h4>
+                    <p>github.com/manojkumar</p>
+                </div>
+            </div>
+
+            <div class="social-links slide-up delay-3">
+                <a href="#" class="social-icon">🐙</a>
+                <a href="#" class="social-icon">💼</a>
+                <a href="mailto:manojdannana8@gmail.com" class="social-icon">✉️</a>
+            </div>
+
+            <hr class="contact-divider slide-up delay-4">
+
+            <div class="phone-card slide-up delay-5">
+                <div class="phone-icon">📞</div>
+                <h3>Contact Me Via Phone</h3>
+                <p>Prefer to talk directly? Give me a call for immediate assistance or quick discussions.</p>
+                <a href="tel:+918639059067" class="phone-btn">📞 +91 8639059067</a>
+            </div>
+        </div>
     </section>
 
     <script src="script.js"></script>
 </body>
 </html>
-

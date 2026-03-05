@@ -1,11 +1,7 @@
-// Smooth Scrolling
 function scrollToProjects() {
-    document.getElementById("projects").scrollIntoView({
-        behavior: "smooth"
-    });
+    document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
 }
 
-// Navbar Shadow on Scroll
 window.addEventListener('scroll', () => {
     const nav = document.getElementById('navbar');
     if (window.scrollY > 50) {
@@ -17,7 +13,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Advanced Scroll Reveal Animations
+// The Observer handles all three different types of animations
 const observerOptions = {
     root: null,
     rootMargin: '0px',
@@ -27,11 +23,19 @@ const observerOptions = {
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
-            entry.target.classList.add('show');
+            // Check which animation class to apply based on the hidden class
+            if (entry.target.classList.contains('hidden-left')) {
+                entry.target.classList.add('show-left');
+            } else if (entry.target.classList.contains('hidden-scale')) {
+                entry.target.classList.add('show-scale');
+            } else {
+                entry.target.classList.add('show');
+            }
             observer.unobserve(entry.target); 
         }
     });
 }, observerOptions);
 
-const hiddenElements = document.querySelectorAll('.hidden');
+// Observe all elements with any of the hidden classes
+const hiddenElements = document.querySelectorAll('.hidden, .hidden-left, .hidden-scale');
 hiddenElements.forEach((el) => observer.observe(el));

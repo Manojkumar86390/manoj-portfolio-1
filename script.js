@@ -32,5 +32,5 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Target ALL animation classes
-const animatedElements = document.querySelectorAll('.3d-flip, .pop-in, .slide-up, .reveal-text');
+const animatedElements = document.querySelectorAll('.flip3d, .pop-in, .slide-up, .reveal-text');
 animatedElements.forEach((el) => observer.observe(el));

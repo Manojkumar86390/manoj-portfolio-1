@@ -15,7 +15,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Advanced 3D Scroll Reveal Engine
+// Advanced Scroll Reveal Engine
 const observerOptions = {
     root: null,
     rootMargin: '0px',
@@ -25,15 +25,12 @@ const observerOptions = {
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
-            // Adds the 'active' class to trigger our CSS animations
             entry.target.classList.add('active');
-            
-            // Stops watching once it has animated so it doesn't repeat infinitely
             observer.unobserve(entry.target); 
         }
     });
 }, observerOptions);
 
-// Target ALL the animation classes we built in CSS
-const animatedElements = document.querySelectorAll('.3d-flip, .pop-in, .slide-up, .reveal-text, .hidden');
+// Target ALL animation classes
+const animatedElements = document.querySelectorAll('.3d-flip, .pop-in, .slide-up, .reveal-text');
 animatedElements.forEach((el) => observer.observe(el));

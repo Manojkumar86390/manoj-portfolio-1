@@ -199,20 +199,20 @@
         <p class="contact-subtitle reveal-text">I'm always open to discussing new opportunities, collaborations, or just having a chat about technology.</p>
 
         <div class="contact-container">
-            <form class="contact-form slide-up delay-1" onsubmit="event.preventDefault(); alert('Message sent successfully!');">
+           <form class="contact-form slide-up delay-1" onsubmit="sendContactMail(event)">
                 <div class="form-row">
                     <div class="form-group">
                         <label>Name *</label>
-                        <input type="text" placeholder="Your name" required>
+                       <input type="text" id="name" placeholder="Your name" required>
                     </div>
                     <div class="form-group">
                         <label>Email *</label>
-                        <input type="email" placeholder="your.email@example.com" required>
+                        <input type="email" id="email" placeholder="your.email@example.com" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label style="text-align: left;">Message *</label>
-                    <textarea rows="5" placeholder="Tell me about your project or just say hello..." required></textarea>
+                   <textarea id="message" rows="5" placeholder="Tell me about your project or just say hello..." required></textarea>
                 </div>
                 <button type="submit" class="submit-btn">Send Message</button>
             </form>
@@ -300,6 +300,7 @@ alert("Hiring Request Sent!");
     
 </body>
 </html>
+
 
 
 

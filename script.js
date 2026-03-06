@@ -47,40 +47,49 @@ document.addEventListener("DOMContentLoaded", () => {
     const closeModalBtn = document.getElementById('closeModalBtn');
     const celebrationContainer = document.getElementById('celebrationContainer');
 
-    // Function to open modal and trigger celebration
-    function openModal() {
-        hireModal.classList.add('show');
-        triggerCelebration();
-    }
-
-    // Function to close modal
-    function closeModal() {
-        hireModal.classList.remove('show');
-        // Clear particles slightly after it closes to keep DOM clean
-        setTimeout(() => {
-            celebrationContainer.innerHTML = '';
-        }, 400);
-    }
-
-    // Event Listeners
-    openModalBtn.addEventListener('click', openModal);
-    closeModalBtn.addEventListener('click', closeModal);
-
-    // Close when clicking outside the modal content box
-    window.addEventListener('click', (e) => {
-        if (e.target === hireModal) {
-            closeModal();
+    // Make sure the button actually exists on the page before adding listeners
+    if (openModalBtn && hireModal) {
+        
+        // Function to open modal and trigger celebration
+        function openModal() {
+            hireModal.classList.add('show');
+            triggerCelebration();
         }
-    });
+
+        // Function to close modal
+        function closeModal() {
+            hireModal.classList.remove('show');
+            // Clear particles slightly after it closes to keep DOM clean
+            setTimeout(() => {
+                if(celebrationContainer) celebrationContainer.innerHTML = '';
+            }, 400);
+        }
+
+        // Event Listeners for clicks
+        openModalBtn.addEventListener('click', openModal);
+        
+        if (closeModalBtn) {
+            closeModalBtn.addEventListener('click', closeModal);
+        }
+
+        // Close when clicking outside the modal content box
+        window.addEventListener('click', (e) => {
+            if (e.target === hireModal) {
+                closeModal();
+            }
+        });
+    }
 
     // The Celebration Engine
     function triggerCelebration() {
+        if (!celebrationContainer) return;
+        
         // Clear old particles if any
         celebrationContainer.innerHTML = '';
 
         const particleCount = 40; 
         const emojis = ['🎉', '✨', '⭐', '🌸', '💼', '🎊'];
-        const colors = ['#fde047', '#d946ef', '#38bdf8', '#10b981']; // Gold, Pink, Blue, Green
+        const colors = ['#fde047', '#d946ef', '#38bdf8', '#10b981']; 
 
         for (let i = 0; i < particleCount; i++) {
             const particle = document.createElement('span');

@@ -1,4 +1,3 @@
-// Ensure script runs only after everything is loaded
 document.addEventListener("DOMContentLoaded", () => {
     
     // Smooth Scrolling to Projects
@@ -22,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const observerOptions = {
         root: null,
         rootMargin: '0px',
-        threshold: 0.05 // Lowered threshold so it triggers earlier
+        threshold: 0.05 
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -34,8 +33,8 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }, observerOptions);
 
-    // Watch all elements that use the fixed class names
-    const animatedElements = document.querySelectorAll('.reveal-3d, .pop-in, .slide-up, .reveal-text');
+    // Watch all elements that use the animation classes
+    const animatedElements = document.querySelectorAll('.reveal-3d, .slide-up, .reveal-text');
     animatedElements.forEach((el) => observer.observe(el));
     
 });

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manojkumar Dannana | Portfolio</title>
-    <link rel="stylesheet" href="style.css?v=6.0">
+    <link rel="stylesheet" href="style.css?v=8.0">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 </head>
 
@@ -30,6 +30,10 @@
             <div class="button-group">
                 <button class="cta-btn" onclick="scrollToProjects()">View My Work</button>
                 <a href="Manojkumar_Resume.pdf" download="Manojkumar_Resume.pdf" class="cta-btn outline-btn">Download Resume</a>
+            </div>
+            
+            <div class="hire-btn-container">
+                <button id="openHireModalBtn" class="hero-hire-btn">Hire Me 🤝</button>
             </div>
         </div>
         <div class="glow-circle top-left"></div>
@@ -240,7 +244,37 @@
         </div>
     </section>
 
+    <div id="hireModal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-modal" id="closeModalBtn">&times;</button>
+            
+            <div class="modal-header">
+                <h2 class="serif-title">Let's Work <span class="gradient-text">Together</span></h2>
+                <p>I am thrilled to hear about your opportunity.</p>
+            </div>
+
+            <form class="hire-form" id="hireForm">
+                <div class="modal-form-group">
+                    <label>Company Name</label>
+                    <input type="text" placeholder="e.g. Google, TechCorp..." required>
+                </div>
+                <div class="modal-form-group">
+                    <label>Contact Number</label>
+                    <input type="tel" placeholder="+91 00000 00000" required>
+                </div>
+                <div class="modal-form-group">
+                    <label>Message / Job Details</label>
+                    <textarea rows="4" placeholder="Tell me about the role or project..." required></textarea>
+                </div>
+                <button type="submit" class="modal-submit-btn">
+                    Send Hiring Inquiry <span class="btn-icon">✨</span>
+                </button>
+            </form>
+
+            <div id="celebrationContainer" class="celebration-container"></div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
-

@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
     
-    // Smooth Scrolling to Projects
+    // Smooth Scrolling
     window.scrollToProjects = function() {
         document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
     };
 
-    // Navbar Shadow on Scroll
+    // Navbar Shadow
     window.addEventListener('scroll', () => {
         const nav = document.getElementById('navbar');
         if (window.scrollY > 50) {
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Advanced Scroll Reveal Engine
+    // Observer for Animations
     const observerOptions = {
         root: null,
         rootMargin: '0px',
@@ -35,7 +35,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }, observerOptions);
 
-    // Watch all elements that use the animation classes
     const animatedElements = document.querySelectorAll('.reveal-3d, .slide-up, .reveal-text');
     animatedElements.forEach((el) => observer.observe(el));
     
